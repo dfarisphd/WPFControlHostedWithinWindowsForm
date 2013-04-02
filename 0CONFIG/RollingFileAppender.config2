@@ -1,0 +1,60 @@
+By Default we have the following values for following properties of RollingFileAppender
+
+staticLogFileName = true
+countDirection = –1
+rollingStyle = Composite
+maxSizeRollBackups = 0 // be careful with this
+maximumFileSize = “10MB”
+datePattern = ".yyyy-MM-dd"
+staticLogFileName indicates whether you need to keep writing (log) to the same file all the time. You will need to set it to false when using Date as the rolling style and you have large number of backups.
+
+Optionally file.log.yyyy-mm-dd for current formated datePattern can by the currently logging file (or file.log.curSizeRollBackup (rollingStyle=Size) or even file.log.yyyy-mm-dd.curSizeRollBackup --- (rollingStyle=Composite)) This will make time based roll overs with a large number of backups much faster -- it won't have to rename all the backups!
+
+Recommend to leave it at its default value “true”
+
+countDirection when its value is –1, then newest logfile backup will always be file.log.1.. hence this would involve more number of file renaming.
+
+By default newer files have lower numbers. (countDirection < 0) ie. log.1 is most recent, log.5 is the 5th backup, etc... countDirection > 0 does the opposite ie. log.1 is the first backup made, log.5 is the 5th backup made, etc. For infinite backups use countDirection > 0 to reduce rollOver costs.
+
+rollingStyle can be either Date, Size or Composite. the default setting Composite, uses a combination of Size and Date settings. Thus if you have the datePattern set to “.yyyy-MM-dd” and maxSizeRollBackups set to 10, themn it will maintain 10 log backups for each day.
+
+If you have the DatePattern set to “.yyyy-MM-dd HH:mm” and maxSizeRollbackups = 10 then it will maintain 10 logfile backups per minute
+
+Samples:
+
+   1: <appender name="RollingFileAppenderV1" type="log4net.Appender.RollingFileAppender">
+   2:     <file type="log4net.Util.PatternString" value="F:\HornetFeed\%property{LogName}" />
+   3:     <appendToFile value="true" />
+   4:     <rollingStyle value="Size" />
+   5:     <maxSizeRollBackups value="-1" />
+   6:     <maximumFileSize value="5000KB" />
+   7:     <staticLogFileName value="true" />
+   8:     <countDirection value="1"/>
+   9:     <layout type="log4net.Layout.PatternLayout">
+  10:         <conversionPattern value="%m%n" />
+  11:     </layout>
+  12:     <filter type="log4net.Filter.PropertyFilter">
+  13:         <Key value="Version" />
+  14:         <StringToMatch value="1" />
+  15:     </filter>
+  16:     <filter type="log4net.Filter.DenyAllFilter" />
+  17: </appender>
+This will create infinite file backups with the countdirection > 0 so that the newest file has the latest/greatest name i.e. log.5 for the newest backup (5th backup)
+
+s will create infinite file backups with the countdirection > 0 so that the newest file has the latest/greatest name i.e. log.5 for the newest backup (5th backup)
+
+   1: <appender name="RollingLogFileAppender" type="log4net.Appender.RollingFileAppender">
+   2:         <file value="logfile" />
+   3:         <appendToFile value="true" />
+   4:         <rollingStyle value="Composite" />
+   5:         <datePattern value=".yyyyMMdd-HHmm" />
+   6:         <maxSizeRollBackups value="10" />
+   7:         <maximumFileSize value="1MB" />
+   8:         <countDirection value="1"/>
+   9:         <layout type="log4net.Layout.PatternLayout">
+  10:             <conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />
+  11:         </layout>
+  12:     </appender>
+This is a Composite RollingFileAppender which keeps max of 10 1MB log backups every minute
+
+
