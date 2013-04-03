@@ -34,3 +34,5 @@ Imports System.Runtime.InteropServices
 ' [assembly: AssemblyVersion("1.0.*")]
 <Assembly: AssemblyVersion("1.0.0.0")>
 <Assembly: AssemblyFileVersion("1.0.0.0")>
+
+<Assembly: log4net.Config.XmlConfigurator(ConfigFile:="WFHost-Log4Net-Config.xml", Watch:=True)> 

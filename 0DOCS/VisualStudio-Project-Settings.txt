@@ -1,0 +1,68 @@
+<!-- ADDED TO: AssemblyInfo.vb -->
+
+<Assembly: log4net.Config.XmlConfigurator(
+               ConfigFile:="WFHost-Log4Net-Config.xml",
+               Watch:=True)> 
+
+<!-- ADDED LOG4NET DLL REFERENCE TO EACH PROJECT -->
+
+    <Reference Include="log4net">
+      <HintPath>..\3rdPartyLibraries\Apache-Log4Net\log4net.dll</HintPath>
+    </Reference>
+
+<!-- MAYBE WE DO NOT NEED ALL OF THESE NAMESPACES -->
+
+  <ItemGroup>
+    <Import Include="log4net" />
+    <Import Include="log4net.Appender" />
+    <Import Include="log4net.Config" />
+    <Import Include="log4net.Core" />
+    <Import Include="log4net.DateFormatter" />
+    <Import Include="log4net.Filter" />
+    <Import Include="log4net.Layout" />
+    <Import Include="log4net.Layout.Pattern" />
+    <Import Include="log4net.ObjectRenderer" />
+    <Import Include="log4net.Plugin" />
+    <Import Include="log4net.Repository" />
+    <Import Include="log4net.Repository.Hierarchy" />
+    <Import Include="log4net.Util" />
+    <Import Include="log4net.Util.TypeConverters" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="My" />
+    <Import Include="My.Resources" />
+    <Import Include="MyControls" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System" />
+    <Import Include="WFHost" />
+  </ItemGroup>
+
+<!-- POST-BUILD AND POST-CLEAN EVENTS -->
+
+  <PropertyGroup>
+    <PostBuildEvent>
+       XCOPY /Y /F /R /V /I
+         "$(ProjectDir)..\3rdPartyLibraries\Apache-Log4Net\log4net.*"
+         "$(TargetDir)"
+    </PostBuildEvent>
+  </PropertyGroup>
+
+  <!-- To modify your build process, add your task inside one of the targets
+         below and uncomment it. Other similar extension points exist,
+         see Microsoft.Common.targets. -->
+
+  <!--
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+   <Target Name="BeforeClean">
+      <Delete Files="$(TargetDir)log4net.*" ContinueOnError="true" />
+   </Target>

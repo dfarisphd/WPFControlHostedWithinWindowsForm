@@ -8,7 +8,8 @@ Imports MyControls
 Namespace WFHost
 	Partial Public Class Form1
 		Inherits Form
-		Private ctrlHost As ElementHost
+
+      Private ctrlHost As ElementHost
 		Private wpfAddressCtrl As MyControls.CustomControl1
         Private initFontWeight As System.Windows.FontWeight
         Private initFontSize As Double

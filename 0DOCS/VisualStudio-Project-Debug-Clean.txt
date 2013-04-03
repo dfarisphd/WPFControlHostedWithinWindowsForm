@@ -1,0 +1,39 @@
+------ Skipped Clean: Project: 3rdPartyLibraries, Configuration: Debug x86 ------
+Project not selected to build for this solution configuration 
+------ Clean started: Project: WFHost, Configuration: Debug x86 ------
+Build started 4/3/2013 2:46:40 PM.
+CoreClean:
+  Deleting file "D:\WPF-WindowsFormsHostingWpfControl\vb\WFHost\bin\Debug\WFHost.exe".
+  Deleting file "D:\WPF-WindowsFormsHostingWpfControl\vb\WFHost\bin\Debug\WFHost.pdb".
+  Deleting file "D:\WPF-WindowsFormsHostingWpfControl\vb\WFHost\bin\Debug\MyControls.dll".
+  Deleting file "D:\WPF-WindowsFormsHostingWpfControl\vb\WFHost\bin\Debug\MyControls.pdb".
+  Deleting file "D:\WPF-WindowsFormsHostingWpfControl\vb\WFHost\obj\x86\Debug\ResolveAssemblyReference.cache".
+  Deleting file "D:\WPF-WindowsFormsHostingWpfControl\vb\WFHost\obj\x86\Debug\WFHost.Form1.resources".
+  Deleting file "D:\WPF-WindowsFormsHostingWpfControl\vb\WFHost\obj\x86\Debug\Resources.resources".
+  Deleting file "D:\WPF-WindowsFormsHostingWpfControl\vb\WFHost\obj\x86\Debug\GenerateResource.read.1.tlog".
+  Deleting file "D:\WPF-WindowsFormsHostingWpfControl\vb\WFHost\obj\x86\Debug\GenerateResource.write.1.tlog".
+  Deleting file "D:\WPF-WindowsFormsHostingWpfControl\vb\WFHost\obj\x86\Debug\WFHost.exe".
+  Deleting file "D:\WPF-WindowsFormsHostingWpfControl\vb\WFHost\obj\x86\Debug\WFHost.pdb".
+AfterClean:
+  Deleting file "D:\WPF-WindowsFormsHostingWpfControl\vb\WFHost\bin\Debug\log4net.dll".
+  Deleting file "D:\WPF-WindowsFormsHostingWpfControl\vb\WFHost\bin\Debug\log4net.xml".
+
+Build succeeded.
+
+Time Elapsed 00:00:00.00
+------ Clean started: Project: MyControls, Configuration: Debug x86 ------
+Build started 4/3/2013 2:46:40 PM.
+CoreClean:
+  Deleting file "D:\WPF-WindowsFormsHostingWpfControl\vb\MyControls\bin\Debug\MyControls.dll".
+  Deleting file "D:\WPF-WindowsFormsHostingWpfControl\vb\MyControls\bin\Debug\MyControls.pdb".
+  Deleting file "D:\WPF-WindowsFormsHostingWpfControl\vb\MyControls\obj\x86\Debug\CustomControl1.baml".
+  Deleting file "D:\WPF-WindowsFormsHostingWpfControl\vb\MyControls\obj\x86\Debug\CustomControl1.g.vb".
+  Deleting file "D:\WPF-WindowsFormsHostingWpfControl\vb\MyControls\obj\x86\Debug\MyControls_MarkupCompile.cache".
+  Deleting file "D:\WPF-WindowsFormsHostingWpfControl\vb\MyControls\obj\x86\Debug\MyControls.g.resources".
+  Deleting file "D:\WPF-WindowsFormsHostingWpfControl\vb\MyControls\obj\x86\Debug\MyControls.dll".
+  Deleting file "D:\WPF-WindowsFormsHostingWpfControl\vb\MyControls\obj\x86\Debug\MyControls.pdb".
+
+Build succeeded.
+
+Time Elapsed 00:00:00.00
+========== Clean: 2 succeeded, 0 failed, 1 skipped ==========
