@@ -1,0 +1,157 @@
+commit b0c8193b137fb2e180ed7677611d1b327e18ffec
+Author: DAVID W FARIS, PHD <dfarisphd@gmail.com>
+Date:   Wed Apr 3 19:04:16 2013 -0700
+
+    >>> [[ DFPHD :: 2013-04-02 ]] APACHE LOG4NET WORKS
+
+ ...Studio-Apache-Log4Net-WORKS-RollingLogFiles.PNG |  Bin 0 -> 291171 bytes
+ ...pache-Log4Net-WORKS-UDPNetworkAppenderWorks.PNG |  Bin 0 -> 376735 bytes
+ ...tudio-Apache-Log4Net-WORKS-WatchConfigFile2.PNG |  Bin 0 -> 309655 bytes
+ ...dio-Apache-Log4Net-WORKS-WatchingConfigFile.PNG |  Bin 0 -> 282303 bytes
+ vb/WFHost/Form1.vb                                 |  329 +++++++++++++-------
+ vb/WFHost/My Project/AssemblyInfo.vb               |    2 +-
+ vb/WFHost/WFHost-Log4Net-Config.xml                |    9 +-
+ vb/WFHost/WFHost.vbproj                            |   15 +-
+ 8 files changed, 229 insertions(+), 126 deletions(-)
+
+commit 79a053a0d62e6d504381ed911db95529279dbccc
+Author: DAVID W FARIS, PHD <dfarisphd@gmail.com>
+Date:   Wed Apr 3 15:38:21 2013 -0700
+
+    >>> [[ DFPHD :: 2013-04-03 T1537 ]] Making VS2010 Project Changes (DLLs and XML)
+
+ 0BAK/log4net.dll                                   |  Bin 0 -> 288768 bytes
+ 0BAK/log4net.xml                                   |30205 ++++++++++++++++++++
+ ...dPartyLibraries-AddedLog4Net-WithNamespaces.PNG |  Bin 0 -> 203309 bytes
+ ...o-3rdPartyLibraries-WPFHost-PostBuildMacros.PNG |  Bin 0 -> 199025 bytes
+ 0DOCS/VisualStudio-Project-Debug-Build.txt         |   64 +
+ 0DOCS/VisualStudio-Project-Debug-Clean.txt         |   39 +
+ 0DOCS/VisualStudio-Project-Release-Build.txt       |   64 +
+ 0DOCS/VisualStudio-Project-Release-Clean.txt       |   39 +
+ 0DOCS/VisualStudio-Project-Settings.txt            |   68 +
+ 0DOCS/XCOPY-Help.txt                               |   93 +
+ log4net.dll                                        |  Bin 288768 -> 0 bytes
+ log4net.xml                                        |30205 --------------------
+ vb/3rdPartyLibraries/3rdPartyLibraries.vbproj      |   77 +
+ vb/3rdPartyLibraries/Apache-Log4Net/log4net.dll    |  Bin 0 -> 288768 bytes
+ vb/3rdPartyLibraries/Apache-Log4Net/log4net.xml    |30205 ++++++++++++++++++++
+ vb/3rdPartyLibraries/App.config                    |    6 +
+ vb/MyControls/MyControls.vbproj                    |    3 -
+ vb/WFHost/Form1.vb                                 |    3 +-
+ vb/WFHost/My Project/AssemblyInfo.vb               |    2 +
+ vb/WFHost/My Project/app.manifest                  |   48 +
+ vb/WFHost/WFHost-Log4Net-Config.xml                |   20 +
+ vb/WFHost/WFHost.exe.log4net                       |   20 +
+ vb/WFHost/WFHost.sln                               |    7 +-
+ vb/WFHost/WFHost.vbproj                            |   82 +-
+ 24 files changed, 61038 insertions(+), 30212 deletions(-)
+
+commit a2baa3b1102721863ffd8f029dc53820b7ea118d
+Author: FARIS, BUELLER <dfarisphd@gmail.com>
+Date:   Tue Apr 2 08:21:10 2013 -0700
+
+    >>> [[ DFPHD :: 2013-04-02 ]] Removed damn VIM SWAP FILES
+
+ .gitignore                                         |    5 +-
+ ...-MaxNumber-RollingFileAppender-DateTime.txt.swp |  Bin 16384 -> 0 bytes
+ .../DOC-MaxNumber-RollingFileAppender-DateTime.txt |  137 ++++++++++++++++++++
+ 3 files changed, 141 insertions(+), 1 deletions(-)
+
+commit c7cc701155bdc6bb8a792842465b8b643de99dc6
+Author: FARIS, BUELLER <dfarisphd@gmail.com>
+Date:   Tue Apr 2 08:09:53 2013 -0700
+
+    >>> [[ DFPHD :: 2013-04-02 ]] MSDN Docs and Source (WPF + WinForms)
+
+ 0BAK/WindowsFormsHostingWpfControl-1.zip           |  Bin 0 -> 35234 bytes
+ 0BAK/WindowsFormsHostingWpfControl.xps             |  Bin 933489 -> 0 bytes
+ 0BAK/WpfHostingWindowsFormsControl.zip             |  Bin 0 -> 17129 bytes
+ ...Walkthrough-HostingWPFControlInWindowsForms.pdf |  Bin 0 -> 2066608 bytes
+ ...ostingWindowsFormsCompositeControlInsideWPF.pdf |  Bin 0 -> 1376192 bytes
+ 0DOCS/WindowsFormsHostingWpfControl.xps            |  Bin 0 -> 933489 bytes
+ 6 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 6fe409fd5c06529da410ed7f142567b54a9f5e3b
+Author: FARIS, BUELLER <dfarisphd@gmail.com>
+Date:   Tue Apr 2 07:53:54 2013 -0700
+
+    >>> [[ DFPHD :: 2013-04-02 ]] Added Log4Net RollingFileAppender Configs
+
+ ...-MaxNumber-RollingFileAppender-DateTime.txt.swp |  Bin 0 -> 16384 bytes
+ 0CONFIG/CustomRollingFileAppender.cs               |   74 ++++++++++++++++++++
+ 0CONFIG/Rolling-Logfile_YYYY.MM.DD.log.seq         |   27 +++++++
+ 0CONFIG/RollingFileAppender.config                 |   66 +++++++++++++++++
+ 0CONFIG/RollingFileAppender.config1                |   37 ++++++++++
+ 0CONFIG/RollingFileAppender.config2                |   60 ++++++++++++++++
+ 6 files changed, 264 insertions(+), 0 deletions(-)
+
+commit 01d75334976707cf1fbb4d1ff75ae96d1ac4c631
+Author: DAVID W FARIS, PHD <dfarisphd@gmail.com>
+Date:   Mon Apr 1 18:40:16 2013 -0700
+
+    >>> [[ DFPHD :: 2013-04-01 ]] Added ZIRK AVS V4.0 Status Docx
+
+ .../ZIRK-AVS-V4.0 --- LOGFILE --- 2013-04-01.docx  |  Bin 0 -> 1038560 bytes
+ 1 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 98f0641c5cdf59cc00bb1afc8ce363e756197ed4
+Author: DAVID W FARIS, PHD <dfarisphd@gmail.com>
+Date:   Mon Apr 1 18:31:55 2013 -0700
+
+    >>> [[ DFPHD :: 2013-04-01 ]] Added Log4Net DLL Refs
+
+ README.md                       |   28 +++++++++++++++++++++++++++-
+ vb/MyControls/MyControls.vbproj |    6 ++++++
+ vb/WFHost/WFHost.vbproj         |    4 +++-
+ 3 files changed, 36 insertions(+), 2 deletions(-)
+
+commit 5c32bfedcaa8edff88d17d09d06a1fcc053a8fd4
+Author: DAVID W FARIS, PHD <dfarisphd@gmail.com>
+Date:   Mon Apr 1 18:19:57 2013 -0700
+
+    >>> [[ DFPHD :: 2013-04-01 ]] Initial Commit And Repo Setup
+
+ 0BAK/WindowsFormsHostingWpfControl.xps     |  Bin 0 -> 933489 bytes
+ 0BAK/WindowsFormsHostingWpfControl.zip     |  Bin 0 -> 35234 bytes
+ cs/MyControls/CustomControl1.xaml          |  107 +
+ cs/MyControls/CustomControl1.xaml.cs       |  185 +
+ cs/MyControls/MyControls.csproj            |   69 +
+ cs/WFHost/Form1.Designer.cs                |  475 +
+ cs/WFHost/Form1.cs                         |  164 +
+ cs/WFHost/Form1.resx                       |  120 +
+ cs/WFHost/Program.cs                       |   21 +
+ cs/WFHost/Properties/AssemblyInfo.cs       |   36 +
+ cs/WFHost/Properties/Resources.Designer.cs |   71 +
+ cs/WFHost/Properties/Resources.resx        |  117 +
+ cs/WFHost/Properties/Settings.Designer.cs  |   30 +
+ cs/WFHost/Properties/Settings.settings     |    7 +
+ cs/WFHost/WFHost.csproj                    |   97 +
+ cs/WFHost/WFHost.sln                       |   26 +
+ log4net.dll                                |  Bin 0 -> 288768 bytes
+ log4net.xml                                |30205 ++++++++++++++++++++++++++++
+ vb/MyControls/CustomControl1.xaml          |  107 +
+ vb/MyControls/CustomControl1.xaml.vb       |  176 +
+ vb/MyControls/MyControls.sln               |   20 +
+ vb/MyControls/MyControls.vbproj            |   88 +
+ vb/WFHost/Form1.Designer.vb                |  470 +
+ vb/WFHost/Form1.resx                       |  120 +
+ vb/WFHost/Form1.vb                         |  126 +
+ vb/WFHost/My Project/AssemblyInfo.vb       |   36 +
+ vb/WFHost/My Project/Resources.Designer.vb |   61 +
+ vb/WFHost/My Project/Resources.resx        |  117 +
+ vb/WFHost/My Project/Settings.Designer.vb  |   26 +
+ vb/WFHost/My Project/Settings.settings     |    7 +
+ vb/WFHost/Program.vb                       |   15 +
+ vb/WFHost/WFHost.sln                       |   25 +
+ vb/WFHost/WFHost.vbproj                    |  111 +
+ 33 files changed, 33235 insertions(+), 0 deletions(-)
+
+commit 706602579371d4da45fbb66c9a0f11b42658461a
+Author: David Faris <dfarisphd@gmail.com>
+Date:   Mon Apr 1 18:15:28 2013 -0700
+
+    Initial commit
+
+ .gitignore |   99 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ README.md  |    4 ++
+ 2 files changed, 103 insertions(+), 0 deletions(-)
