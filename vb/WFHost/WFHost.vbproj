@@ -56,7 +56,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="log4net">
-      <HintPath>..\3rdPartyLibraries\Apache-Log4Net\log4net.dll</HintPath>
+      <HintPath>C:\Users\faris\Downloads\log4net-1.2.11-bin-newkey\log4net-1.2.11\bin\net-cp\4.0\release\log4net.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -138,12 +138,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MyControls\MyControls.vbproj">
-      <Project>{006940D9-17E0-4628-9087-8C01B03D2153}</Project>
-      <Name>MyControls</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
@@ -168,7 +162,14 @@
   <ItemGroup>
     <None Include="WFHost-Log4Net-Config.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyControls\MyControls.vbproj">
+      <Project>{138AE223-3217-4FC9-92A6-4CF144A63BCB}</Project>
+      <Name>MyControls</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>
